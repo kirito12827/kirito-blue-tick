@@ -73,6 +73,6 @@ if __name__ == "__main__":
     file_urls = [
         "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list",
         "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list"
-    
+    ]
     # 处理文件下载和转换
     process_files(file_urls)
