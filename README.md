@@ -1,1 +1,1 @@
-方便拉取更新的clash分流规则
+將txt或list文件內容轉換為mihomo內核能夠識別的yaml內容
