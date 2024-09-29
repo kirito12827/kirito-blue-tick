@@ -40,11 +40,11 @@ def write_yaml(data, output_path):
             # 直接添加注释行
             yaml_content['payload'].append(line)
         else:
-            # 为非注释行添加两个空格
-            yaml_content['payload'].append('  ' + line)
+            # 为非注释行添加两个空格和破折号
+            yaml_content['payload'].append('  - ' + line)
     
     with open(output_path, 'w', encoding='utf-8') as yaml_file:
-        yaml.dump(yaml_content, yaml_file, allow_unicode=True, default_flow_style=False)
+        yaml.dump(yaml_content, yaml_file, allow_unicode=True, default_flow_style=False, sort_keys=False)
     print(f"已覆盖文件: {output_path}")
 
 def convert_file_to_yaml(file_path):
