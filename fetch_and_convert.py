@@ -1,5 +1,4 @@
 import os
-import yaml
 import requests
 import shutil
 
@@ -27,24 +26,21 @@ def read_file(file_path):
         content = file.readlines()
     return [line.strip() for line in content]  # 返回所有行
 
-def write_yaml(data, output_path):
+def write_custom_yaml(data, output_path):
     """
-    将数据写入到 .yaml 文件，前加 payload:
-    :param data: list, 需要转换为 yaml 的数据
+    将数据写入到自定义格式的 .yaml 文件，前加 payload:
+    :param data: list, 需要转换的原始数据
     :param output_path: str, 输出的 yaml 文件路径
     """
-    yaml_content = {'payload': []}  # 初始化 YAML 内容
-
-    for line in data:
-        if line.startswith('#'):
-            # 直接添加注释行
-            yaml_content['payload'].append(line)
-        elif line:  # 跳过空行
-            # 为非注释行添加两个空格和破折号
-            yaml_content['payload'].append('  - ' + line)
-    
     with open(output_path, 'w', encoding='utf-8') as yaml_file:
-        yaml.dump(yaml_content, yaml_file, allow_unicode=True, default_flow_style=False, sort_keys=False)
+        yaml_file.write("payload:\n")  # 添加 payload
+        for line in data:
+            if line.startswith('#'):
+                # 保留注释行
+                yaml_file.write(line + "\n")
+            elif line:  # 跳过空行
+                # 添加两个空格和破折号
+                yaml_file.write("  - " + line + "\n")
     print(f"已覆盖文件: {output_path}")
 
 def convert_file_to_yaml(file_path):
@@ -54,7 +50,7 @@ def convert_file_to_yaml(file_path):
     """
     file_data = read_file(file_path)
     yaml_path = os.path.splitext(file_path)[0] + '.yaml'  # 直接使用相同的文件名
-    write_yaml(file_data, yaml_path)
+    write_custom_yaml(file_data, yaml_path)
     return yaml_path
 
 def process_files(file_urls):
@@ -80,8 +76,8 @@ def process_files(file_urls):
 if __name__ == "__main__":
     # 定义要下载的多个文件的URL列表
     file_urls = [
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list",
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list"
+        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list",
+        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list"
     ]
     
     # 处理文件下载和转换
