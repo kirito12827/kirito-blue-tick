@@ -25,7 +25,7 @@ def read_file(file_path):
     """
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.readlines()
-    return [line.strip() for line in content]
+    return [line.strip() for line in content]  # 返回所有行
 
 def write_yaml(data, output_path):
     """
@@ -33,7 +33,16 @@ def write_yaml(data, output_path):
     :param data: list, 需要转换为 yaml 的数据
     :param output_path: str, 输出的 yaml 文件路径
     """
-    yaml_content = {'payload': data}  # 将数据放入 payload 字典中
+    yaml_content = {'payload': []}  # 初始化 YAML 内容
+
+    for line in data:
+        if line.startswith('#'):
+            # 直接添加注释行
+            yaml_content['payload'].append(line)
+        else:
+            # 为非注释行添加两个空格
+            yaml_content['payload'].append('  ' + line)
+    
     with open(output_path, 'w', encoding='utf-8') as yaml_file:
         yaml.dump(yaml_content, yaml_file, allow_unicode=True, default_flow_style=False)
     print(f"已覆盖文件: {output_path}")
@@ -71,8 +80,9 @@ def process_files(file_urls):
 if __name__ == "__main__":
     # 定义要下载的多个文件的URL列表
     file_urls = [
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list",
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list"
+        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list",
+        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list"
     ]
+    
     # 处理文件下载和转换
     process_files(file_urls)
