@@ -39,7 +39,7 @@ def write_yaml(data, output_path):
         if line.startswith('#'):
             # 直接添加注释行
             yaml_content['payload'].append(line)
-        else:
+        elif line:  # 跳过空行
             # 为非注释行添加两个空格和破折号
             yaml_content['payload'].append('  - ' + line)
     
@@ -80,8 +80,8 @@ def process_files(file_urls):
 if __name__ == "__main__":
     # 定义要下载的多个文件的URL列表
     file_urls = [
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list",
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list"
+        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list",
+        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list"
     ]
     
     # 处理文件下载和转换
