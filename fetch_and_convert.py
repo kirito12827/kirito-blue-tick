@@ -29,12 +29,14 @@ def read_file(file_path):
 
 def write_yaml(data, output_path):
     """
-    将数据写入到 .yaml 文件
+    将数据写入到 .yaml 文件，前加 payload:
     :param data: list, 需要转换为 yaml 的数据
     :param output_path: str, 输出的 yaml 文件路径
     """
+    yaml_content = {'payload': data}  # 将数据放入 payload 字典中
     with open(output_path, 'w', encoding='utf-8') as yaml_file:
-        yaml.dump(data, yaml_file, allow_unicode=True, default_flow_style=False)
+        yaml.dump(yaml_content, yaml_file, allow_unicode=True, default_flow_style=False)
+    print(f"已覆盖文件: {output_path}")
 
 def convert_file_to_yaml(file_path):
     """
@@ -42,10 +44,8 @@ def convert_file_to_yaml(file_path):
     :param file_path: str, 需要转换的文件路径
     """
     file_data = read_file(file_path)
-    yaml_filename = os.path.splitext(os.path.basename(file_path))[0] + '.yaml'
-    yaml_path = os.path.join(os.path.dirname(file_path), yaml_filename)
+    yaml_path = os.path.splitext(file_path)[0] + '.yaml'  # 直接使用相同的文件名
     write_yaml(file_data, yaml_path)
-    print(f"已将 {file_path} 转换为 {yaml_filename}")
     return yaml_path
 
 def process_files(file_urls):
@@ -73,7 +73,6 @@ if __name__ == "__main__":
     file_urls = [
         "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list",
         "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list"
-    ]
     
     # 处理文件下载和转换
     process_files(file_urls)
