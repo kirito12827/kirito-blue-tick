@@ -3,9 +3,9 @@ name: Fetch and Convert Files
 on:
   push:
     branches:
-      - clash  # 当推送到 clash 分支时运行工作流
+      - clash
   schedule:
-    - cron: '0 0 * * *'  # 每天自动运行一次
+    - cron: '0 0 * * *'
 
 jobs:
   fetch_and_convert:
@@ -34,7 +34,7 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git add .
-        git commit -m "Auto-fetched and converted files to YAML"
+        git diff-index --quiet HEAD || git commit -m "Auto-fetched and converted files to YAML"
         git push origin clash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
