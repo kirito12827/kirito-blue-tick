@@ -1,6 +1,6 @@
 payload:
 # 来源： https://github.com/MisakaFxxk/MisakaF_Subconverter/blob/main/Sub/Emby.list
-# 最后更新时间：2024-09-17 19:27
+# 最后更新时间：2024-10-30 00:31
 ##### A #####
 # ACA & MisakaF
   - DOMAIN-SUFFIX,emby.aca.best
@@ -9,6 +9,8 @@ payload:
   - DOMAIN-SUFFIX,agan2.vip
 # Aiyowei
   - DOMAIN-SUFFIX,emby.aiyowei.ml
+# AlphaTV
+  - DOMAIN,oversea.alphatvapp.top
 ##### B #####
 # BGK
   - DOMAIN-SUFFIX,emby.pro
