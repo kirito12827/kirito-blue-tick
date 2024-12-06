@@ -89,12 +89,12 @@ def process_files(file_urls):
             folder_name = os.path.splitext(file_name)[0]
             os.makedirs(folder_name, exist_ok=True)
 
-            # 移动原始文件到文件夹中
-            shutil.move(file_name, os.path.join(folder_name, file_name))
-
             # 转换文件并将 YAML 文件移动到相同文件夹中
-            converted_file_path = convert_file_to_yaml(os.path.join(folder_name, file_name))
+            converted_file_path = convert_file_to_yaml(file_name)
             shutil.move(converted_file_path, os.path.join(folder_name, os.path.basename(converted_file_path)))
+
+            # 移动 .list 文件到相同的目录
+            shutil.move(file_name, os.path.join(folder_name, file_name))
 
 if __name__ == "__main__":
     # 定义要下载的多个文件的URL列表
