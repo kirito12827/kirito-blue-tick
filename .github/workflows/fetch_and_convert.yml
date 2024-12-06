@@ -27,7 +27,7 @@ jobs:
     
     - name: Run fetch and convert script
       run: |
-        python fetch_and_convert.py
+        python .github/workflows/fetch_and_convert.py
 
     - name: Commit and push changes
       run: |
