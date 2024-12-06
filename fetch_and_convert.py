@@ -99,9 +99,9 @@ def process_files(file_urls):
 if __name__ == "__main__":
     # 定义要下载的多个文件的URL列表
     file_urls = [
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/DownloadCDN_CN.list",
-        "https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Rules/Emby.list",
-        "https://raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/refs/heads/main/TalkatoneProxy.list"
+        "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/DownloadCDN_CN.list",
+        "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Emby.list",
+        "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Talkatone.list"
     ]
     
     # 处理文件下载和转换
