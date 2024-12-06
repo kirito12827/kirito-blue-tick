@@ -1,4 +1,6 @@
 payload:
+# 规则名称: Emby
+# 规则统计: 166
   - DOMAIN,195.201.86.86
   - DOMAIN,aca.misakaf.org
   - DOMAIN,cc.coemn.com
