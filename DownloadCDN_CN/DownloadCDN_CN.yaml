@@ -1,6 +1,4 @@
 payload:
-# 规则名称: DownloadCDN_CN
-# 规则统计: 17
   - DOMAIN,alibaba.cdn.steampipe.steamcontent.com
   - DOMAIN,assets1.xboxlive.cn
   - DOMAIN,assets2.xboxlive.cn
