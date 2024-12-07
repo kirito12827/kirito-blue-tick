@@ -4,23 +4,35 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  clear-commits:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
         with:
-          ref: X
-      - name: Configure Git
+          ref: clash  # 确保是目标分支
+
+      - name: Configure Git and Clear Commit History
         run: |
+          # 设置 Git 用户信息
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout --orphan clearhistory
-          git branch -D X
-          git checkout --orphan X
+
+          # 创建一个孤立分支
+          git checkout --orphan temp-clearhistory
+
+          # 添加所有文件并提交
           git add .
-          git commit -m "ㅤ"
-          git push -f -u origin X
-      - name: Cleanup Workflow
+          git commit -m "Initial commit after clearing history"
+
+          # 删除旧分支并重命名新分支为目标分支
+          git branch -D clash
+          git branch -m clash
+
+          # 强制推送到远程仓库，覆盖历史
+          git push -f -u origin clash
+
+      - name: Cleanup Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
           retain_days: 0
