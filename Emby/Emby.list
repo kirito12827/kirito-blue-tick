@@ -25,6 +25,7 @@ payload:
   - DOMAIN-SUFFIX,agan2.vip
   - DOMAIN-SUFFIX,agasg.odysseyplus.site
   - DOMAIN-SUFFIX,agon.cf
+  - DOMAIN-SUFFIX,aliz.work
   - DOMAIN-SUFFIX,az-hk.embyclub.com
   - DOMAIN-SUFFIX,azsgp.embyclub.com
   - DOMAIN-SUFFIX,baisi.pro
@@ -167,4 +168,3 @@ payload:
   - IP-CIDR,188.172.228.49/32,no-resolve
   - IP-CIDR,202.61.255.248/32,no-resolve
   - IP-CIDR,212.90.120.164/32,no-resolve
-  - DOMAIN-SUFFIX,aliz.work
