@@ -96,7 +96,7 @@ if __name__ == "__main__":
             "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/DownloadCDN_CN.list"
         ],
         "Emby.list": [
-            "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Emby.list
+            "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Emby.list",
             "https://raw.githubusercontent.com/kirito12827/kk_zawuku/refs/heads/clash/rule/emby.list"
         ],
         "Talkatone.list": [
