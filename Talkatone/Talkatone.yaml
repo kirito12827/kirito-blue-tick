@@ -1,7 +1,6 @@
-# Total entries: 9
 payload:
 # 规则名称: Talkatone
-# 规则统计: 6
+# 规则数量: 6
   - DOMAIN-SUFFIX,mobilefuse.com
   - DOMAIN-SUFFIX,talkatone.com
   - DOMAIN-SUFFIX,tktn.be
