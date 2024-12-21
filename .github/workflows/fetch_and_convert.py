@@ -5,7 +5,7 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Define rule types in the order of priority
+# 定义规则类型的排序优先级
 RULE_ORDER = [
     "DOMAIN",
     "DOMAIN-SUFFIX",
@@ -64,18 +64,44 @@ def sort_rules(rules):
 
     return sorted(rules, key=rule_key)
 
-def format_to_payload(file_name, content):
+def write_list_file(file_name, content):
     """
-    Format content into the required payload format.
+    Write sorted content to a .list file with header comments.
     :param file_name: str, name of the .list file
-    :param content: list, cleaned and sorted content of the file
+    :param content: list, sorted content
     """
     folder_name = os.path.splitext(file_name)[0]
     os.makedirs(folder_name, exist_ok=True)
 
     list_file_path = os.path.join(folder_name, file_name)
     rule_count = len(content)
-    rule_name = os.path.splitext(file_name)[0]  # Remove extension
+    rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
+
+    # Prepare content with header comments
+    formatted_content = [
+        f"# 规则名称: {rule_name}",
+        f"# 规则数量: {rule_count}"
+    ] + content
+
+    try:
+        with open(list_file_path, 'w', encoding='utf-8') as list_file:
+            list_file.write("\n".join(formatted_content))
+        logging.info(f"List file saved: {list_file_path}")
+    except IOError as e:
+        logging.error(f"Failed to write list file {list_file_path}: {e}")
+
+def write_yaml_file(file_name, content):
+    """
+    Write content to a YAML file in payload format.
+    :param file_name: str, name of the .list file
+    :param content: list, sorted content
+    """
+    folder_name = os.path.splitext(file_name)[0]
+    os.makedirs(folder_name, exist_ok=True)
+
+    yaml_file_path = os.path.join(folder_name, f"{os.path.splitext(file_name)[0]}.yaml")
+    rule_count = len(content)
+    rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
 
     # Prepare content with payload format
     formatted_content = [
@@ -84,17 +110,16 @@ def format_to_payload(file_name, content):
         f"# 规则数量: {rule_count}"
     ] + [f"  - {line}" for line in content]
 
-    # Write to file
     try:
-        with open(list_file_path, 'w', encoding='utf-8') as list_file:
-            list_file.write("\n".join(formatted_content))
-        logging.info(f"Formatted file saved: {list_file_path}")
+        with open(yaml_file_path, 'w', encoding='utf-8') as yaml_file:
+            yaml_file.write("\n".join(formatted_content))
+        logging.info(f"YAML file saved: {yaml_file_path}")
     except IOError as e:
-        logging.error(f"Failed to write formatted file {list_file_path}: {e}")
+        logging.error(f"Failed to write YAML file {yaml_file_path}: {e}")
 
 def process_file(file_name, urls):
     """
-    Download, merge contents, sort rules, and generate formatted .list file.
+    Download, merge contents, sort rules, and generate both .list and .yaml files.
     :param file_name: str, name of the file
     :param urls: list, list of URLs to download the file from
     """
@@ -110,8 +135,9 @@ def process_file(file_name, urls):
     # Sort rules
     sorted_content = sort_rules(merged_content)
 
-    # Format content and save to file
-    format_to_payload(file_name, sorted_content)
+    # Write .list and .yaml files
+    write_list_file(file_name, sorted_content)
+    write_yaml_file(file_name, sorted_content)
 
 if __name__ == "__main__":
     # Define the files to download and their respective URLs
