@@ -5,6 +5,16 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Define rule types in the order of priority
+RULE_ORDER = [
+    "DOMAIN",
+    "DOMAIN-SUFFIX",
+    "DOMAIN-KEYWORD",
+    "IP-CIDR",
+    "IP-CIDR6",
+    "IP-SUFFIX"
+]
+
 def download_file(file_url):
     """
     Download the specified file.
@@ -39,18 +49,33 @@ def merge_file_contents(file_contents):
     
     return merged_lines
 
+def sort_rules(rules):
+    """
+    Sort rules based on RULE_ORDER and alphabetically.
+    :param rules: list, list of rule strings
+    :return: list, sorted rules
+    """
+    def rule_key(line):
+        parts = line.split(",")
+        if parts[0] in RULE_ORDER:
+            return (RULE_ORDER.index(parts[0]), parts[1])  # Sort by rule type and alphabetically
+        else:
+            return (len(RULE_ORDER), line)  # Unknown types go to the end
+
+    return sorted(rules, key=rule_key)
+
 def format_to_payload(file_name, content):
     """
     Format content into the required payload format.
     :param file_name: str, name of the .list file
-    :param content: list, cleaned content of the file
+    :param content: list, cleaned and sorted content of the file
     """
     folder_name = os.path.splitext(file_name)[0]
     os.makedirs(folder_name, exist_ok=True)
 
     list_file_path = os.path.join(folder_name, file_name)
     rule_count = len(content)
-    rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
+    rule_name = os.path.splitext(file_name)[0]  # Remove extension
 
     # Prepare content with payload format
     formatted_content = [
@@ -69,7 +94,7 @@ def format_to_payload(file_name, content):
 
 def process_file(file_name, urls):
     """
-    Download, merge contents, and generate formatted .list file.
+    Download, merge contents, sort rules, and generate formatted .list file.
     :param file_name: str, name of the file
     :param urls: list, list of URLs to download the file from
     """
@@ -82,8 +107,11 @@ def process_file(file_name, urls):
     # Merge contents
     merged_content = merge_file_contents(file_contents)
 
+    # Sort rules
+    sorted_content = sort_rules(merged_content)
+
     # Format content and save to file
-    format_to_payload(file_name, merged_content)
+    format_to_payload(file_name, sorted_content)
 
 if __name__ == "__main__":
     # Define the files to download and their respective URLs
