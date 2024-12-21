@@ -1,3 +1,4 @@
+# Total entries: 172
 payload:
 # 规则名称: Emby
 # 规则统计: 166
@@ -167,3 +168,6 @@ payload:
   - IP-CIDR,188.172.228.49/32,no-resolve
   - IP-CIDR,202.61.255.248/32,no-resolve
   - IP-CIDR,212.90.120.164/32,no-resolve
+# 规则名称:emby
+# 规则统计:1
+  - DOMAIN-SUFFIX,aliz.work
