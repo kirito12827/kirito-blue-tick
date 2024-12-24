@@ -1,5 +1,5 @@
 # 规则名称: Emby
-# 规则数量: 167
+# 规则数量: 168
 DOMAIN,195.201.86.86
 DOMAIN,aca.misakaf.org
 DOMAIN,cc.coemn.com
@@ -161,6 +161,7 @@ DOMAIN-SUFFIX,uuuoo.cc
 DOMAIN-SUFFIX,wiri.tk
 DOMAIN-SUFFIX,xiaoyi.one
 DOMAIN-SUFFIX,xmsl.org
+DOMAIN-SUFFIX,ykk.emby.moe
 DOMAIN-SUFFIX,zi0.icu
 DOMAIN-SUFFIX,zox.show
 IP-CIDR,152.53.67.239/32,no-resolve
