@@ -1,8 +1,7 @@
 payload:
 # 规则名称: Emby
-# 规则数量: 168
+# 规则数量: 166
   - DOMAIN,195.201.86.86
-  - DOMAIN,aca.misakaf.org
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link
   - DOMAIN,cuinf.sfcat.link
@@ -114,7 +113,6 @@ payload:
   - DOMAIN-SUFFIX,magpie.cyou
   - DOMAIN-SUFFIX,magpiecdn.tech
   - DOMAIN-SUFFIX,mcjoker.xyz
-  - DOMAIN-SUFFIX,misakaf.org
   - DOMAIN-SUFFIX,misty.ltd
   - DOMAIN-SUFFIX,mius.uk
   - DOMAIN-SUFFIX,mjjemby.org
