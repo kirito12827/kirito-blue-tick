@@ -1,6 +1,6 @@
 payload:
 # 规则名称: Emby
-# 规则数量: 165
+# 规则数量: 166
   - DOMAIN,195.201.86.86
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link
@@ -151,6 +151,7 @@ payload:
   - DOMAIN-SUFFIX,starcat.eu.org
   - DOMAIN-SUFFIX,stream.ntrrr.top
   - DOMAIN-SUFFIX,stream.synn.cc
+  - DOMAIN-SUFFIX,streamer.pilipiliultra.com
   - DOMAIN-SUFFIX,studyfun.live
   - DOMAIN-SUFFIX,tanhuatv.site
   - DOMAIN-SUFFIX,texon.fans
