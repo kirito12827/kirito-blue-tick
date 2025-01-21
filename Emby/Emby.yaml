@@ -1,6 +1,6 @@
 payload:
 # 规则名称: Emby
-# 规则数量: 165
+# 规则数量: 168
   - DOMAIN,195.201.86.86
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link
@@ -135,12 +135,15 @@ payload:
   - DOMAIN-SUFFIX,pornemby.club
   - DOMAIN-SUFFIX,post.cn2gias.uk
   - DOMAIN-SUFFIX,pub1.emby.wtf
+  - DOMAIN-SUFFIX,pub1.term.wtf
   - DOMAIN-SUFFIX,pub1back.emby.wtf
   - DOMAIN-SUFFIX,pub1cf.emby.wtf
   - DOMAIN-SUFFIX,pub2.emby.wtf
+  - DOMAIN-SUFFIX,pub2.term.wtf
   - DOMAIN-SUFFIX,pub2back.emby.wtf
   - DOMAIN-SUFFIX,pub2cf.emby.wtf
   - DOMAIN-SUFFIX,pub3.emby.wtf
+  - DOMAIN-SUFFIX,pub3.term.wtf
   - DOMAIN-SUFFIX,pub3back.emby.wtf
   - DOMAIN-SUFFIX,pub3cf.emby.wtf
   - DOMAIN-SUFFIX,reddust.link
