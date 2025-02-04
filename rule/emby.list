@@ -1,5 +1,5 @@
 # 规则名称:emby
-# 规则统计:8
+# 规则统计:9
 
 DOMAIN-SUFFIX,aliz.work
 DOMAIN-SUFFIX,ykk.emby.moe
@@ -9,3 +9,4 @@ DOMAIN-SUFFIX,pub3.term.wtf
 DOMAIN-SUFFIX,alist7.eu.org
 DOMAIN-SUFFIX,vfing.de
 DOMAIN-SUFFIX,tv.worldline.space
+IP-CIDR,152.53.54.201/32
