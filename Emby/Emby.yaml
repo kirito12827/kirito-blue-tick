@@ -8,6 +8,7 @@ payload:
   - DOMAIN,notnetflix.cos.cat
   - DOMAIN-SUFFIX,123456.al
   - DOMAIN-SUFFIX,16bit.cfd
+  - DOMAIN-SUFFIX,1l1.icu
   - DOMAIN-SUFFIX,20120714.xyz
   - DOMAIN-SUFFIX,252798.xyz
   - DOMAIN-SUFFIX,285286.xyz
@@ -65,6 +66,7 @@ payload:
   - DOMAIN-SUFFIX,emby.maying.club
   - DOMAIN-SUFFIX,emby.mdss.cloud
   - DOMAIN-SUFFIX,emby.ml
+  - DOMAIN-SUFFIX,emby.moe
   - DOMAIN-SUFFIX,emby.neko.edu.rs
   - DOMAIN-SUFFIX,emby.nexitally.com
   - DOMAIN-SUFFIX,emby.nyancat.net
@@ -117,6 +119,7 @@ payload:
   - DOMAIN-SUFFIX,mius.uk
   - DOMAIN-SUFFIX,mjjemby.org
   - DOMAIN-SUFFIX,movie.xeton.dev
+  - DOMAIN-SUFFIX,moyuancn.vip
   - DOMAIN-SUFFIX,mulgore.net
   - DOMAIN-SUFFIX,nanflix.net
   - DOMAIN-SUFFIX,nebula-media.org
@@ -136,15 +139,12 @@ payload:
   - DOMAIN-SUFFIX,pornemby.club
   - DOMAIN-SUFFIX,post.cn2gias.uk
   - DOMAIN-SUFFIX,pub1.emby.wtf
-  - DOMAIN-SUFFIX,pub1.term.wtf
   - DOMAIN-SUFFIX,pub1back.emby.wtf
   - DOMAIN-SUFFIX,pub1cf.emby.wtf
   - DOMAIN-SUFFIX,pub2.emby.wtf
-  - DOMAIN-SUFFIX,pub2.term.wtf
   - DOMAIN-SUFFIX,pub2back.emby.wtf
   - DOMAIN-SUFFIX,pub2cf.emby.wtf
   - DOMAIN-SUFFIX,pub3.emby.wtf
-  - DOMAIN-SUFFIX,pub3.term.wtf
   - DOMAIN-SUFFIX,pub3back.emby.wtf
   - DOMAIN-SUFFIX,pub3cf.emby.wtf
   - DOMAIN-SUFFIX,reddust.link
@@ -157,6 +157,7 @@ payload:
   - DOMAIN-SUFFIX,stream.synn.cc
   - DOMAIN-SUFFIX,studyfun.live
   - DOMAIN-SUFFIX,tanhuatv.site
+  - DOMAIN-SUFFIX,term.wtf
   - DOMAIN-SUFFIX,texon.fans
   - DOMAIN-SUFFIX,tkremby.xyz
   - DOMAIN-SUFFIX,tv.worldline.space
@@ -165,7 +166,6 @@ payload:
   - DOMAIN-SUFFIX,wiri.tk
   - DOMAIN-SUFFIX,xiaoyi.one
   - DOMAIN-SUFFIX,xmsl.org
-  - DOMAIN-SUFFIX,ykk.emby.moe
   - DOMAIN-SUFFIX,zi0.icu
   - DOMAIN-SUFFIX,zox.show
   - IP-CIDR,152.53.54.201/32,no-resolve
