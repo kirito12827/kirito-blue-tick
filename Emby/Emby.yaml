@@ -1,6 +1,6 @@
 payload:
 # 规则名称: Emby
-# 规则数量: 172
+# 规则数量: 175
   - DOMAIN,195.201.86.86
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link
@@ -33,6 +33,7 @@ payload:
   - DOMAIN-SUFFIX,baisi.pro
   - DOMAIN-SUFFIX,bangumi.ca
   - DOMAIN-SUFFIX,bddup.com
+  - DOMAIN-SUFFIX,beebi.org
   - DOMAIN-SUFFIX,bili.de
   - DOMAIN-SUFFIX,bili.rip
   - DOMAIN-SUFFIX,blueseacdn.com
@@ -94,6 +95,7 @@ payload:
   - DOMAIN-SUFFIX,embyplus.org
   - DOMAIN-SUFFIX,embyserver.ga
   - DOMAIN-SUFFIX,embytv.cf
+  - DOMAIN-SUFFIX,free.28.al
   - DOMAIN-SUFFIX,freetz.top
   - DOMAIN-SUFFIX,gfwemby.org
   - DOMAIN-SUFFIX,ggtt.cf
@@ -149,6 +151,7 @@ payload:
   - DOMAIN-SUFFIX,pub3cf.emby.wtf
   - DOMAIN-SUFFIX,reddust.link
   - DOMAIN-SUFFIX,ru.odysseyplus.site
+  - DOMAIN-SUFFIX,saturday.video
   - DOMAIN-SUFFIX,servers.xeton.dev
   - DOMAIN-SUFFIX,shuipo.lol
   - DOMAIN-SUFFIX,speedx.one
