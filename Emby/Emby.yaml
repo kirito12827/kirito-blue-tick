@@ -1,6 +1,6 @@
 payload:
 # 规则名称: Emby
-# 规则数量: 175
+# 规则数量: 176
   - DOMAIN,195.201.86.86
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link
@@ -171,6 +171,7 @@ payload:
   - DOMAIN-SUFFIX,xmsl.org
   - DOMAIN-SUFFIX,zi0.icu
   - DOMAIN-SUFFIX,zox.show
+  - IP-CIDR,135.180.189.141/32,no-resolve
   - IP-CIDR,152.53.54.201/32,no-resolve
   - IP-CIDR,152.53.67.239/32,no-resolve
   - IP-CIDR,188.172.228.49/32,no-resolve
