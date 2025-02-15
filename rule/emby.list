@@ -12,6 +12,6 @@ DOMAIN-SUFFIX,moyuancn.vip
 DOMAIN-SUFFIX,saturday.video
 DOMAIN-SUFFIX,beebi.org
 DOMAIN-SUFFIX,free.28.al
-DOMAIN,SUFFIX,emby.711.lol
+DOMAIN-SUFFIX,emby.711.lol
 IP-CIDR,135.180.189.141/32,no-resolve
 IP-CIDR,152.53.54.201/32,no-resolve
