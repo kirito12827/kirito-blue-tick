@@ -2,7 +2,6 @@ payload:
 # 规则名称: Emby
 # 规则数量: 178
   - DOMAIN,195.201.86.86
-  - DOMAIN,SUFFIX,emby.711.lol
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link
   - DOMAIN,cuinf.sfcat.link
@@ -53,6 +52,7 @@ payload:
   - DOMAIN-SUFFIX,em.ssky.me
   - DOMAIN-SUFFIX,emby-cf.plusmedia.site
   - DOMAIN-SUFFIX,emby-sg.plusmedia.site
+  - DOMAIN-SUFFIX,emby.711.lol
   - DOMAIN-SUFFIX,emby.aiyowei.ml
   - DOMAIN-SUFFIX,emby.bid
   - DOMAIN-SUFFIX,emby.cjpc.cc
