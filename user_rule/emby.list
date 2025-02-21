@@ -1,0 +1,27 @@
+# 规则名称: emby 
+# 规则数量: 18 
+# DOMAIN: 0 
+# DOMAIN-SUFFIX: 16 
+# DOMAIN-KEYWORD: 0 
+# IP-CIDR: 2 
+# IP-CIDR6: 0 
+# IP-SUFFIX: 0 
+
+DOMAIN-SUFFIX,1024.name
+DOMAIN-SUFFIX,1l1.icu
+DOMAIN-SUFFIX,alist7.eu.org
+DOMAIN-SUFFIX,aliz.work
+DOMAIN-SUFFIX,beebi.org
+DOMAIN-SUFFIX,daigua.j8.work
+DOMAIN-SUFFIX,emby.711.lol
+DOMAIN-SUFFIX,emby.asubaka.top
+DOMAIN-SUFFIX,emby.moe
+DOMAIN-SUFFIX,free.28.al
+DOMAIN-SUFFIX,moyuancn.vip
+DOMAIN-SUFFIX,pilipiliultra.com
+DOMAIN-SUFFIX,saturday.video
+DOMAIN-SUFFIX,term.wtf
+DOMAIN-SUFFIX,tv.worldline.space
+DOMAIN-SUFFIX,vfing.de
+IP-CIDR,135.180.189.141/32,no-resolve
+IP-CIDR,152.53.54.201/32,no-resolve
