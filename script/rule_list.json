@@ -14,7 +14,7 @@
   ],
   "Steam_CN.list": [
     "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list",
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.list",
     "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/steam_CN.list"
   ]
 }
