@@ -1,5 +1,5 @@
 # 规则名称: Emby
-# 规则数量: 181
+# 规则数量: 182
 DOMAIN,195.201.86.86
 DOMAIN,cc.coemn.com
 DOMAIN,cminf.sfcat.link
@@ -82,6 +82,7 @@ DOMAIN-SUFFIX,emby.prprcloud.com
 DOMAIN-SUFFIX,emby.run
 DOMAIN-SUFFIX,emby.ssltd.xyz
 DOMAIN-SUFFIX,emby.trade
+DOMAIN-SUFFIX,emby.ucloudhost.top
 DOMAIN-SUFFIX,emby.ws
 DOMAIN-SUFFIX,emby.wtf
 DOMAIN-SUFFIX,emby.xeton.dev
