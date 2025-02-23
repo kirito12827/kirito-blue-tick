@@ -4,8 +4,8 @@
 ## 规则列表
 处理的规则总计: 5 
 
-最后同步时间: 2025年02月23日 14:17 
+最后同步时间: 2025年02月23日 14:19 
 
 | 规则名称 |    |     |     |     |
 |----------|----------|----------|----------|----------|
-| [DownloadCDN_CN.list](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/DownloadCDN_CN.list)|[Emby.list ](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Emby.list )|[Talkatone.list](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Talkatone.list)|[Steam.list](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Steam.list)|[Steam_CN.list](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Steam_CN.list) |
+| [DownloadCDN_CN](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/DownloadCDN_CN)|[Emby      ](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Emby      )|[Talkatone ](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Talkatone )|[Steam     ](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Steam     )|[Steam_CN  ](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/Steam_CN  ) |
