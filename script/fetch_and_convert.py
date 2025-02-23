@@ -222,12 +222,16 @@ def process_file(file_name: str, urls: List[str], folder_name: str, folder_path:
     # 排序规则
     sorted_content = sort_rules(merged_content)
 
+    # 在 rule 目录下创建同名文件夹
+    rule_folder_path = os.path.join(folder_path, folder_name)
+    os.makedirs(rule_folder_path, exist_ok=True)
+
     # 写入 .list 和 .yaml 文件
-    write_list_file(file_name, sorted_content, folder_name, folder_path)
-    write_yaml_file(file_name, sorted_content, folder_name, folder_path)
+    write_list_file(file_name, sorted_content, folder_name, rule_folder_path)
+    write_yaml_file(file_name, sorted_content, folder_name, rule_folder_path)
 
     # 写入 .md 文件
-    write_md_file(urls, sorted_content, folder_name, folder_path)
+    write_md_file(urls, sorted_content, folder_name, rule_folder_path)
 
 def write_total_md_file(folder_path: str, rule_list_data: Dict[str, List[str]], width: int = 5) -> None:
     """
