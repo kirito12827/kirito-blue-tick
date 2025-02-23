@@ -266,7 +266,7 @@ def write_total_md_file(folder_path: str, rule_list_data: Dict[str, List[str]], 
     markdown_table.append("| 规则名称 |" + " | ".join(["   "] * (width - 1)) + " |")
     markdown_table.append("|" + "----------|" * width)
     for row in rows:
-        formatted_row = [f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row]
+        formatted_row = [f"[{cell:<10}](https://github.com/kirito12827/kk_zawuku/tree/clash/rule/{cell:<10})" for cell in row]
         markdown_table.append("| " + "|".join(formatted_row) + " |")
 
     md_content += "\n".join(markdown_table)
