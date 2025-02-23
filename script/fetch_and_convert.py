@@ -300,8 +300,8 @@ if __name__ == "__main__":
 
     # 批量处理
     for file_name, urls in rule_list_data.items():
-        folder_names = [os.path.splitext(item)[0] for item in list(rule_list_data.keys())]
-        process_file(file_name, urls, folder_name, folder_path)
+    folder_name = os.path.splitext(file_name)[0]
+    process_file(file_name, urls, folder_name, folder_path)
 
     # 生成总的 MD 文件
     write_total_md_file(folder_path, rule_list_data)
