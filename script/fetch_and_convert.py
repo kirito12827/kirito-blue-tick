@@ -251,7 +251,7 @@ def write_total_md_file(folder_path: str, rule_list_data: Dict[str, List[str]], 
 
 最后同步时间: {now_time} \n
 """
-    folder_names = list(rule_list_data.keys())
+    folder_names = [os.path.splitext(item)[0] for item in list(rule_list_data.keys())]
 
     rows = []
     for i in range(0, len(folder_names), width):
