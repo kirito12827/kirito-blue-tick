@@ -327,12 +327,12 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
 if __name__ == "__main__":
 
     # 自定义 rule 文件夹总路径
-    folder_path = 'rules/Clash/'
+    folder_path = 'rule/'
 
-    # 获取 rule_file_list.json 的路径
-    json_file_path = os.path.join(os.path.dirname(__file__), 'rule_file_list.json')
+    # 获取 rule_list.json 的路径
+    json_file_path = os.path.join(os.path.dirname(__file__), 'rule_list.json')
 
-    # 读取 rule_file_list.json 文件
+    # 读取 rule_list.json 文件
     with open(json_file_path, "r", encoding="utf-8") as json_file:
         rule_list_data = json.load(json_file)
 
