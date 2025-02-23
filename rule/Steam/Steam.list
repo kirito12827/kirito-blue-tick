@@ -1,5 +1,13 @@
 # 规则名称: Steam
 # 规则数量: 54
+# 同步时间: 2025年02月23日 08:42
+# DOMAIN: 54
+# DOMAIN-SUFFIX: 51
+# DOMAIN-KEYWORD: 3
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
+
 DOMAIN-SUFFIX,cdn-ali.content.steamchina.com
 DOMAIN-SUFFIX,cdn-qc.content.steamchina.com
 DOMAIN-SUFFIX,cdn-ws.content.steamchina.com

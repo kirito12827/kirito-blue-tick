@@ -1,6 +1,14 @@
-payload:
 # 规则名称: Emby
 # 规则数量: 182
+# 同步时间: 2025年02月23日 08:42
+# DOMAIN: 176
+# DOMAIN-SUFFIX: 171
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 6
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
+
+payload:
   - DOMAIN,195.201.86.86
   - DOMAIN,cc.coemn.com
   - DOMAIN,cminf.sfcat.link

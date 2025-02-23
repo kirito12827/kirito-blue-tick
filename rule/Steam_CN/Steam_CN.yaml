@@ -1,6 +1,14 @@
-payload:
 # 规则名称: Steam_CN
 # 规则数量: 109
+# 同步时间: 2025年02月23日 08:42
+# DOMAIN: 63
+# DOMAIN-SUFFIX: 11
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 46
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
+
+payload:
   - DOMAIN,assets1.xboxlive.com
   - DOMAIN,assets2.xboxlive.com
   - DOMAIN,blizzard.gcdn.cloudn.co.kr
